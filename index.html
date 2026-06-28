@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+
+        <h1>Sistema de Registro de Estudiantes</h1>
+    
+    </header>
+
+    <main>
+
+        <section class="form-section">
+
+            <h2>Agregar Estudiante</h2>
+
+
+            <form id="Formulario-estudiante" onsubmit="return false">
+
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Luis">
+                </div>
+                <div class="campo">
+                    <label for="apellidos">Apellido:</label>
+                    <input type="text" id="apellidos" name="apellidos" required placeholder="Ej: Ulate">
+                </div>
+                <div class="campo">
+                    <label for="nota">Nota(0-100):</label>
+                    <input type="text" id="nota" name="nota" required placeholder="Ej: 85">
+                </div>
+                
+                <p id="mensaje-error" class="message-error oculto">
+
+                    Todos los campos son obligatorios y la nota debe ser un número entre 1 y 100
+
+                </p>
+
+                <button type="button" onclick="agregarEstudiante()">Agregar Estudiante</button>
+
+            </form>
+
+        </section>
+
+        <section class="tabla-estudiantes">
+
+            <h2>Lista de Estudiantes</h2>
+
+            <table id="tabla-estudiantes">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Nota</th>
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="cuerpo-tabla">
+
+                    <!-- Los estudiantes se agregan aquí dinámicamente -->
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section class="resumen-section">
+
+            <h2>Resumen de Notas</h2>
+
+            <div class="resumen-cards">
+
+                <div class="card card-mayor">
+
+                    <span class="card-titulo">Mayor Nota</span>
+                    <span id="resumen-mayor" class="card-valor">--</span>
+
+                </div>
+
+                <div class="card card-menor">
+
+                    <span class="card-titulo">Nota más baja</span>
+                    <span id="resumen-menor" class="card-valor">--</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2026 Sistema de Registro de Estudiantes</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
